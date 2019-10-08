@@ -1,0 +1,37 @@
+*{
+	margin: 10px;
+	padding: 10px;
+}
+.adaptive_squares{
+	display: flex;
+}
+.adaptive_squares *{
+	height: 150px;
+	width: 150px;
+	background: white;
+}
+.square_one{
+	background: red;
+}
+.square_two{
+	background: green;
+}
+.square_three{
+	background: blue;
+}
+@media (min-height: 480px) and (orientation: portrait){
+	.adaptive_squares {
+		flex-direction: column;
+		align-items: center;
+	}
+	.adaptive_squares * {
+		margin-top: 20px;
+	}
+}
+@media (min-width: 410px) and (orientation: landscape){
+	.adaptive_squares{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
